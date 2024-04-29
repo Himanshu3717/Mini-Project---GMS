@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexFit Gym</title>
+    <link rel="stylesheet" href="./styles/user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+    <script src="/scripts/user.js" defer></script>
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="nav-container">
+        <nav>
+            <div class="logo">
+                <h1>FlexFit</h1>
+            </div>
+            <ul>
+                <li>
+                    <a href="#home" id="homes" onclick="home()">HOME</a>
+                    <a href="#plan" id="plans" onclick="plan()">PLAN</a>
+                    <a href="#supplement" id="supplements" onclick="supplement()">SUPPLEMENT</a>
+                    <a href="#footer" id="footers" onclick="footer()">CONTACT US</a>
+
+
+                </li>
+            </ul>
+            <div class="profile">
+                <img src="./assets/profile.png" onclick="toggleMenu()">
+            </div>
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="menu">
+                    <div class="user-info">
+                        <a href=""><img src="./assets/profile.png" alt=""></a>
+                        <h2>
+                            <%= name %>
+                        </h2>
+                    </div>
+                    <hr>
+                    <!-- <a href="" class="sub-menu-link">
+                        <img src="./assets/profile.png">
+                        <p>edit profile</p>
+                        <span>></span>
+                    </a> -->
+                    <a class="sub-menu-link" onclick="toggledata()">
+                        <img src="./assets/profile.png">
+                        <p>User-details</p>
+                        <span>></span>
+                    </a>
+                    <div id="user-details-real" class="hidden">
+                        <style>
+                            table,
+                            tr,
+                            td {
+                                border: none;
+                            }
+                        </style>
+
+                        <table>
+                            <tr>
+                                <td><b>Email:</b></td>
+                                <td>
+                                    <%= email %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Number:</b></td>
+                                <td>
+                                    <%= number %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Height:</b></td>
+                                <td>
+                                    <%= height %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Weight:</b></td>
+                                <td>
+                                    <%= weight %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Age:</b></td>
+                                <td>
+                                    <%= age %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Gender:</b></td>
+                                <td>
+                                    <%= gender %>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <a href="" class="sub-menu-link">
+                        <img src="./assets/profile.png">
+                        <p class="logoutBtn">Log out</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!-- main -->
+        <div class="home" id="home">
+            <div class="hometext">
+                <h1>COMMIT TO BE FIT</h1>
+                <h3>Push harder than yesterday if you want a different tomorrow</h3>
+                <p>Where Fitness Meets Celebration! Join us for a dynamic fusion of exhilarating <br>workouts and
+                    vibrant community spirit.
+                    Embrace the FlexFit experience and <br> unleash your potential!</p>
+                <p class="welcome">Welcome <%= name %>!</p>
+
+            </div>
+            <img src="./assets/gym.png" alt="gymboy">
+        </div>
+
+        <!-- plan -->
+        <div class="plan" id="plan">
+            <div class="head">
+                <h1>OUR<span> PLANS</span></h1>
+            </div>
+            <div class="pld">
+                <div class="card">
+                    <i class="fa-solid fa-star"></i>
+                    <h3>Monthly Pack</h3>
+                    <h1><i class="fa-solid fa-indian-rupee-sign" id="rs"></i> 1200</h1>
+                    <p>Valid for 30 days</p>
+                    <p>full day valid</p>
+                    <p>Diet plan included</p>
+                    <a href="/payment.html"><button>Buy Plan</button></a>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-star"></i>
+                    <h3>Quaterly Pack</h3>
+                    <h1><i class="fa-solid fa-indian-rupee-sign" id="rs"></i> 3000</h1>
+                    <p>Valid for 90 days</p>
+                    <p>full day valid</p>
+                    <p>Diet plan included</p>
+                    <a href="/payment.html"><button>Buy Plan</button></a>
+                </div>
+
+
+                <div class="card">
+                    <i class="fa-solid fa-star"></i>
+                    <h3>Half-Yearly Pack</h3>
+                    <h1><i class="fa-solid fa-indian-rupee-sign" id="rs"></i> 5500</h1>
+                    <p>Valid for 180 days</p>
+                    <p>full day valid</p>
+                    <p>Diet plan included</p>
+                    <a href="/payment.html"><button>Buy Plan</button></a>
+                </div>
+
+
+                <div class="card">
+                    <i class="fa-solid fa-star"></i>
+                    <h3>Yearly Pack</h3>
+                    <h1><i class="fa-solid fa-indian-rupee-sign" id="rs"></i> 10000 </h1>
+                    <p>Valid for 365 days</p>
+                    <p>full day valid</p>
+                    <p>Diet plan included</p>
+                    <a href="/payment.html"><button>Buy Plan</button></a>
+                </div>
+            </div>
+        </div>
+        <!-- supplement -->
+        <div class="supplement" id="supplement">
+            <div class="head">
+                <h1>OUR<span> SUPPLEMENTS</span></h1>
+            </div>
+
+            <div class="oursupplement">
+                <div class="crd">
+                    <img src="./assets/protein.jpg" alt="protein">
+                    <h3>MuscleBlaze Protein</h3>
+                    <a href=""><button>Buy</button></a>
+                </div>
+                <div class="crd">
+                    <img src="./assets/download.jpg" alt="creatine">
+                    <h3>MuscleBlaze Creatine</h3>
+                    <a href=""><button>Buy</button></a>
+                </div>
+                <div class="crd">
+                    <img src="./assets/gainer.jpg" alt="weight gainer">
+                    <h3>MuscleBlaze Weight Gainer</h3>
+                    <a href=""><button>Buy</button></a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- footer -->
+        <div class="footer" id="footer">
+
+            <div class="footertext">
+                <h2>FlexFit Gym</h2>
+                <p>
+                    orem ipsum dolor, sit amet <br>
+                    consectetur adipisicing elit. <br>
+                    Praesentium quasi delectus <br>
+                    accusantium iste perspiciatis <br>
+                    cupiditate esse nesciunt! Inventore, <br>
+                    saepe reprehenderit.
+                </p>
+                <p> <b>Contact No:-</b> 00000000000</p>
+                <p> <b>Email:-</b>abc@xyz.com</p>
+            </div>
+
+            <div class="footertext">
+                <h2>Follow Us</h2>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </div>
+
+        </div>
+        <div class="foot">
+            <div class="context">
+                <p>© 2024 FlexFit Fitness & Health Pvt. Ltd. All Rights Reserved.</p>
+            </div>
+            <div class="context">
+                <p>Made with ❤ by <span>VITIAN</span></p>
+            </div>
+
+        </div>
+        <!-- review -->
+        <!-- <div class="review">
+            div
+        </div> -->
+    </div>
+
+    <script>
+        let subMenu = document.getElementById("subMenu");
+        let data = document.getElementById("user-details-real");
+
+        function toggleMenu() {
+            subMenu.classList.toggle("open-menu");
+        }
+
+        function toggledata() {
+            data.classList.toggle("hidden");
+        }
+    </script>
+</body>
+
+</html>
